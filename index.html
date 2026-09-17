@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portal Kegiatan — KPU Kabupaten Buton Selatan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --pink-600:#d92626;
+    --pink-700:#b31e1e;
+    --pink-100:#fbe6e2;
+    --green:#d92626;
+    --blue:#8a5a1f;
+    --amber:#c99a3d;
+    --bg:#f7f4ec;
+    --panel:#ffffff;
+    --ink:#2b241d;
+    --ink-soft:#8a7f6d;
+    --line:#ece4d4;
+  }
+  [data-theme="dark"]{
+    --bg:#1a1410; --panel:#241c16; --ink:#f2ece1; --ink-soft:#b3a390; --line:#382c22; --pink-100:#3a2418;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#1a1410; --panel:#241c16; --ink:#f2ece1; --ink-soft:#b3a390; --line:#382c22; --pink-100:#3a2418;
+    }
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background: var(--bg);
+    color: var(--ink);
+    font-family:'Poppins', -apple-system, sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{ text-decoration:none; color:inherit; }
+
+  header{
+    background: var(--pink-600);
+    color:#fff;
+    padding: 20px 28px;
+  }
+  .header-inner{
+    max-width: 980px; margin:0 auto;
+    display:flex; align-items:center; gap:14px;
+  }
+  .mark{
+    width:42px; height:42px; border-radius:12px; flex-shrink:0;
+    background: rgba(255,255,255,.18);
+    display:flex; align-items:center; justify-content:center;
+    font-weight:700; font-size:14px; letter-spacing:.02em;
+  }
+  .header-inner h1{ font-size:17px; font-weight:600; margin:0; }
+  .header-inner .org{ font-size:12px; color:#ffd7e1; margin:2px 0 0; }
+
+  .wrap{ max-width:980px; margin:0 auto; padding: 28px 28px 60px; }
+
+  .hero{
+    background: var(--panel);
+    border-radius: 18px;
+    padding: 26px 28px;
+    box-shadow: 0 1px 0 var(--line);
+    border: 1px solid var(--line);
+  }
+  .hero .kicker{
+    display:inline-block;
+    background: var(--pink-100); color: var(--pink-700);
+    font-size:11.5px; font-weight:600; letter-spacing:.03em;
+    padding: 5px 12px; border-radius: 999px; margin-bottom: 14px;
+  }
+  .hero h2{
+    font-size:22px; font-weight:600; line-height:1.4; margin:0 0 18px; max-width: 640px;
+  }
+  .stat-row{ display:flex; flex-wrap:wrap; gap: 14px; }
+  .stat{
+    flex:1; min-width:150px;
+    display:flex; align-items:center; gap:12px;
+    background: var(--bg); border-radius: 14px; padding: 14px 16px;
+  }
+  .stat .dot{
+    width:36px; height:36px; border-radius:10px; flex-shrink:0;
+    display:flex; align-items:center; justify-content:center; color:#fff;
+  }
+  .stat .val{ font-size:17px; font-weight:700; line-height:1.2; }
+  .stat .lbl{ font-size:11.5px; color: var(--ink-soft); margin-top:1px; }
+
+  .section-label{ font-size:14px; font-weight:600; margin: 30px 4px 14px; color: var(--ink); }
+
+  .grid{ display:grid; grid-template-columns: repeat(2, 1fr); gap:16px; }
+  @media (max-width:600px){ .grid{ grid-template-columns:1fr; } }
+
+  .card{
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--card-accent, var(--pink-600));
+    border-radius: 14px;
+    padding: 18px 18px 20px;
+    display:flex; gap:14px; align-items:flex-start;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .card:hover{ transform: translateY(-2px); box-shadow: 0 10px 22px rgba(43,43,58,.08); }
+  .card .icon{
+    width:38px; height:38px; border-radius:10px; flex-shrink:0;
+    background: var(--card-accent, var(--pink-600)); color:#fff;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .card h3{ font-size:14.5px; font-weight:600; margin:0 0 4px; }
+  .card p{ font-size:12.5px; line-height:1.5; color: var(--ink-soft); margin:0; }
+
+  footer{
+    max-width:980px; margin:0 auto; padding: 6px 28px 30px;
+    font-size:12px; color: var(--ink-soft);
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="mark">KPU</div>
+    <div>
+      <h1>Portal Kegiatan</h1>
+      <p class="org">KPU Kabupaten Buton Selatan</p>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="hero">
+    <span class="kicker">Undangan kegiatan</span>
+    <h2>Sosialisasi Tahapan Pemilihan Serentak kepada Pemilih Pesisir dan Kepulauan</h2>
+    <div class="stat-row">
+      <div class="stat">
+        <div class="dot" style="background:var(--amber)"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+        <div><div class="val">17 Sep 2026</div><div class="lbl">Tanggal pelaksanaan</div></div>
+      </div>
+      <div class="stat">
+        <div class="dot" style="background:var(--pink-600)"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.4"/></svg></div>
+        <div><div class="val">Aula KPU Busel</div><div class="lbl">Lokasi kegiatan</div></div>
+      </div>
+      <div class="stat">
+        <div class="dot" style="background:var(--amber)"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <div><div class="val">318 peserta</div><div class="lbl">Telah mengisi presensi</div></div>
+      </div>
+    </div>
+  </div>
+
+  <p class="section-label">Layanan kegiatan</p>
+  <div class="grid">
+
+    <a class="card" style="--card-accent:var(--pink-600)" href="#">
+      <div class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="14" height="12" rx="1.5"/><path d="M17 10.5l4-2.5v8l-4-2.5"/></svg></div>
+      <div><h3>Tautan Zoom</h3><p>Informasi tautan dan jadwal pertemuan daring.</p></div>
+    </a>
+
+    <a class="card" style="--card-accent:var(--amber)" href="#">
+      <div class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="1.5"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 16l-5.5-5.5-4 4L9 12l-6 6"/></svg></div>
+      <div><h3>Latar Belakang</h3><p>Unduh latar untuk Zoom atau media sosial.</p></div>
+    </a>
+
+    <a class="card" style="--card-accent:var(--pink-600)" href="#">
+      <div class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h9l4 4v14a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M14 3v5h5"/><path d="M8 13h8M8 16.5h8"/></svg></div>
+      <div><h3>Materi Kegiatan</h3><p>Unduh materi kegiatan dalam format PDF.</p></div>
+    </a>
+
+    <a class="card" style="--card-accent:var(--amber)" href="#">
+      <div class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"/></svg></div>
+      <div><h3>Isi Daftar Hadir</h3><p>Presensi kehadiran menggunakan alamat email Anda.</p></div>
+    </a>
+
+    <a class="card" style="--card-accent:var(--pink-600)" href="#">
+      <div class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l8 4-8 4-8-4 8-4z"/><path d="M4 11v5c0 1.5 3.5 3 8 3s8-1.5 8-3v-5"/></svg></div>
+      <div><h3>Unduh Sertifikat</h3><p>Ambil e-sertifikat setelah diterbitkan admin.</p></div>
+    </a>
+
+    <a class="card" style="--card-accent:var(--amber)" href="#">
+      <div class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L9 17l-4.5 1.5L6 14 16.5 3.5z"/></svg></div>
+      <div><h3>Perbaiki Data Sertifikat</h3><p>Ubah data yang sudah dikirim, cari dengan email.</p></div>
+    </a>
+
+  </div>
+
+  <footer>
+    <span>Komisi Pemilihan Umum Kabupaten Buton Selatan</span>
+    <span>Provinsi Sulawesi Tenggara</span>
+  </footer>
+
+</div>
+
+</body>
+</html>
